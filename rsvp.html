@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSVP — Scott &amp; Dominik</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav nav--solid" id="nav">
+  <a href="index.html" class="nav__brand">S <span class="amp">&amp;</span> D</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Menu">Menu</button>
+  <div class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="details.html">Details</a>
+    <a href="rsvp.html" class="rsvp-link active">RSVP</a>
+  </div>
+</nav>
+
+<section class="band band--green page-head" id="rsvp" data-screen-label="RSVP">
+  <div class="wrap center">
+    <a href="details.html" class="crumb">← Details</a>
+    <p class="eyebrow on-dark reveal">The Engagement Party · 27 Feb 2027</p>
+    <h1 class="section-title reveal">RSVP</h1>
+    <p class="lede reveal" style="margin-top:1.4rem;color:var(--on-dark-soft);">Let us know you are coming to the engagement party, including who is coming with you. We ask you kindly to fill this in as soon as you know you are coming just so we can plan.</p>
+  </div>
+  <div class="wrap">
+    <div class="rsvp-card reveal" style="background:rgba(255,255,255,0.05);border-color:rgba(205,169,104,0.4);">
+      <form id="rsvpForm" novalidate>
+        <div class="field">
+          <label style="color:var(--on-dark-soft);">Are you local, or travelling in?</label>
+          <div class="radio-row radio-row--fill">
+            <label class="radio-chip"><input type="radio" name="origin" value="Local" checked>I'm local — no room needed</label>
+            <label class="radio-chip"><input type="radio" name="origin" value="Travelling in">Travelling in — I need a room</label>
+          </div>
+        </div>
+
+        <!-- shown only when "Travelling in" is selected -->
+        <div id="rsvpStayNote" hidden>
+          <div class="callout" style="margin:0 0 1.8rem;">
+            <div class="callout__seal">i</div>
+            <div>
+              <h4 style="color:var(--on-dark);">Before you fill this in</h4>
+              <p>Rooms and flights are covered by you as we are keeping costs down for the wedding, so we can't fund travel or hotels. What we can do is pass on a discounted room rate at the Inn through Trinity, the company Scott works for — everyone still books and pays for their own room separately.</p>
+              <p style="margin-top:0.9rem;"><a href="details.html#plan" style="color:var(--gold-light);">Have a read of Plan Your Stay first →</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- shown only when "Local" is selected -->
+        <div id="rsvpLocalInfo" hidden>
+          <div class="callout" style="margin:0 0 1.8rem;">
+            <div class="callout__seal">i</div>
+            <div>
+              <h4 style="color:var(--on-dark);">Your weekend at a glance</h4>
+              <p style="margin-bottom:0.7rem;"><strong style="color:var(--on-dark);">Saturday — the engagement party.</strong> 27 Feb 2027, 7pm till midnight at the Holiday Inn, Corby. Bar, drag and karaoke; the food's on us, drinks at the bar.</p>
+              <p><strong style="color:var(--on-dark);">Sunday — a relaxed lunch.</strong> 28 Feb 2027, 11am–1pm at the Holiday Inn. A pay-your-own day-after to wind down together before everyone heads home.</p>
+            </div>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label style="color:var(--on-dark-soft);">Full name *</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label style="color:var(--on-dark-soft);">Email *</label><input type="email" name="email" placeholder="you@email.com" required></div>
+        </div>
+        <div class="field">
+          <label style="color:var(--on-dark-soft);">Names of anyone else coming with you</label>
+          <textarea name="names" placeholder="Just your other guests — e.g. Alex Smith, +1 child. Leave blank if it's only you."></textarea>
+        </div>
+        <div class="field"><label style="color:var(--on-dark-soft);">Number of guests (incl. you)</label><input type="number" name="guests" min="1" max="12" value="1"></div>
+
+        <!-- shown only for guests travelling in -->
+        <div id="rsvpStayBlock" hidden>
+          <div class="field"><label style="color:var(--on-dark-soft);">Travelling from</label><input type="text" name="from" placeholder="City / country"></div>
+          <div class="field">
+            <label style="color:var(--on-dark-soft);">Which night are you coming in?</label>
+            <div class="radio-row">
+              <label class="radio-chip"><input type="radio" name="arrival" value="Friday">Friday</label>
+              <label class="radio-chip"><input type="radio" name="arrival" value="Saturday">Saturday (party night)</label>
+            </div>
+          </div>
+          <div class="field">
+            <label style="color:var(--on-dark-soft);">How many nights are you staying?</label>
+            <div class="radio-row">
+              <label class="radio-chip"><input type="radio" name="length" value="1 night">1 night</label>
+              <label class="radio-chip"><input type="radio" name="length" value="2 nights">2 nights</label>
+              <label class="radio-chip"><input type="radio" name="length" value="3 nights">3 nights</label>
+            </div>
+          </div>
+          <div class="field">
+            <label style="color:var(--on-dark-soft);">Where would you like to stay? (pick any that apply)</label>
+            <p style="color:var(--on-dark-soft);font-size:0.92rem;margin:0 0 0.8rem;">The Saturday party night is at the Holiday Inn in Corby. Adding the Friday before or a Sunday/Monday after? Stay all your nights at the Inn in Corby, or pick the Rose &amp; Crown in our village for the extra nights — see <a href="details.html#plan" style="color:var(--gold-light);">Plan Your Stay</a> for the details.</p>
+            <div class="radio-row">
+              <label class="radio-chip"><input type="checkbox" name="stay" value="Holiday Inn, Corby">Holiday Inn, Corby</label>
+              <label class="radio-chip" id="stayRose"><input type="checkbox" name="stay" value="The Rose & Crown, Thorney">Rose &amp; Crown (Thorney)</label>
+            </div>
+          </div>
+          <div class="field" id="rsvpSplitField" hidden>
+            <label style="color:var(--on-dark-soft);">Splitting your stay across nights? Tell us the plan</label>
+            <input type="text" name="split" placeholder="e.g. Fri &amp; Sun in Thorney, Sat at the Inn">
+          </div>
+        </div>
+        <!-- which parts of the weekend each guest is coming to -->
+        <div class="field" id="rsvpEvents">
+          <label style="color:var(--on-dark-soft);">Which are you coming to?</label>
+          <div class="radio-row">
+            <label class="radio-chip"><input type="checkbox" name="events" value="Saturday engagement party" id="evtParty" checked>Saturday engagement party</label>
+            <label class="radio-chip"><input type="checkbox" name="events" value="Sunday lunch" id="evtLunch">Sunday lunch</label>
+          </div>
+          <p id="lunchMenuLink" hidden style="font-size:0.92rem;margin:0.7rem 0 0;"><a href="https://digital.ihg.com/is/content/ihg/holiday-inn-corby-11082723681-original?fmt=pdf" target="_blank" rel="noopener" style="color:var(--gold-light);">See the lunch menu →</a></p>
+        </div>
+
+        <!-- party food &amp; karaoke — only for guests at the Saturday party -->
+        <div id="rsvpPartyExtras">
+          <div class="field">
+            <label style="color:var(--on-dark-soft);">Any allergies or dietary needs?</label>
+            <div class="radio-row">
+              <label class="radio-chip"><input type="radio" name="dietary" value="No" checked>No</label>
+              <label class="radio-chip"><input type="radio" name="dietary" value="Yes">Yes</label>
+            </div>
+          </div>
+          <p style="color:var(--on-dark-soft);font-size:0.92rem;margin:0 0 1.2rem;">These are just for the Saturday night party food — tell us anything we should cook around.</p>
+          <div id="rsvpDietaryDetail" hidden>
+            <div class="field">
+              <label style="color:var(--on-dark-soft);">Dietary preference</label>
+              <div class="radio-row">
+                <label class="radio-chip"><input type="radio" name="diet_pref" value="Vegetarian">Vegetarian</label>
+                <label class="radio-chip"><input type="radio" name="diet_pref" value="Vegan">Vegan</label>
+                <label class="radio-chip"><input type="radio" name="diet_pref" value="Pescatarian">Pescatarian</label>
+              </div>
+            </div>
+            <div class="field"><label style="color:var(--on-dark-soft);">Allergies &amp; anything we should know</label><textarea name="diet" placeholder="Allergies, intolerances, foods to avoid…"></textarea></div>
+          </div>
+        </div>
+        <div class="field"><label style="color:var(--on-dark-soft);">A message for us (optional)</label><textarea name="message" placeholder="Anything you'd like us to know…"></textarea></div>
+        <div class="field">
+          <label style="color:var(--on-dark-soft);">Most importantly — your karaoke song 🎤</label>
+          <input type="text" name="song" placeholder="What are you singing?">
+          <p style="color:var(--on-dark-soft);font-size:0.92rem;margin:0.5rem 0 0;">Yes — this is the single most important question on the whole form.</p>
+        </div>
+        <div class="center">
+          <button type="submit" class="btn btn--gold" style="padding:16px 44px;">Send our RSVP</button>
+          <p id="rsvpError" style="color:var(--gold-light);font-family:var(--label);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;margin-top:1rem;display:none;">Please add your name &amp; a valid email.</p>
+        </div>
+      </form>
+      <div class="rsvp-success" id="rsvpSuccess">
+        <div class="seal-big" style="background:radial-gradient(circle at 35% 30%,var(--gold-light),var(--gold));color:var(--green-deep);">♥</div>
+        <h3 class="section-title" style="font-size:2.4rem;color:var(--on-dark);">Thank you!</h3>
+        <p style="margin-top:1rem;color:var(--on-dark-soft);">Your RSVP is in — we can't wait to celebrate with you. We'll be in touch with the finer details soon.</p>
+        <button class="btn btn--outline-light" id="rsvpReset" style="margin-top:1.4rem;">Edit my response</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__mono">Scott <span class="amp">&amp;</span> Dominik</div>
+    <div class="footer__date">Engagement · 27 Feb 2027</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scott &amp; Dominik — We're Getting Married</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav__brand">S <span class="amp">&amp;</span> D</a>
+  <button class="nav__toggle" id="navToggle" aria-label="Menu">Menu</button>
+  <div class="nav__links" id="navLinks">
+    <a href="index.html" class="active">Home</a>
+    <a href="details.html">Details</a>
+    <a href="rsvp.html" class="rsvp-link">RSVP</a>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="home" data-screen-label="Hero">
+  <div class="hero__scrim"></div>
+  <div class="hero__inner">
+    <div class="hero__kicker">Together with all our love, we invite you</div>
+    <h1 class="hero__names">Scott <span class="amp">&amp;</span> Dominik</h1>
+    <div class="countdown" id="countdown" aria-label="Countdown to the engagement party">
+      <div class="countdown__unit"><div class="countdown__num" data-cd="days">—</div><div class="countdown__label">Days</div></div>
+      <div class="countdown__unit"><div class="countdown__num" data-cd="hours">—</div><div class="countdown__label">Hours</div></div>
+      <div class="countdown__unit"><div class="countdown__num" data-cd="mins">—</div><div class="countdown__label">Minutes</div></div>
+      <div class="countdown__unit"><div class="countdown__num" data-cd="secs">—</div><div class="countdown__label">Seconds</div></div>
+    </div>
+    <p class="hero__sub" style="margin-top:1.4rem;font-size:1rem;letter-spacing:0.16em;">UNTIL THE ENGAGEMENT PARTY · 27 FEBRUARY 2027</p>
+    <div style="margin-top:1.6rem;"><span class="invite-only" style="margin-bottom:0;">Open to all friends &amp; family</span></div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</header>
+
+<!-- ===================== ENGAGEMENT PARTY (FEATURE) ===================== -->
+<section class="band band--ivory" data-screen-label="Engagement Party">
+  <div class="wrap center">
+    <p class="eyebrow reveal">First Event</p>
+    <h2 class="section-title reveal">The Engagement<br>Party</h2>
+    <p class="lede reveal" style="margin-top:1.4rem;">The first celebration, and the one that kicks everything off. Expect good drink, drag, karaoke and a dancefloor at the Holiday Inn, Corby. Everyone we love is welcome.</p>
+    </div>
+
+    <div class="invite-pin-track" id="invitePinTrack">
+      <div class="invite-pin">
+        <div class="invite-reveal" id="inviteReveal">
+          <div class="invite-wrap">
+            <div class="invite">
+              <span class="invite__corner tl"></span>
+              <span class="invite__corner tr"></span>
+              <span class="invite__corner bl"></span>
+              <span class="invite__corner br"></span>
+              <div class="invite__kicker">You are invited</div>
+              <div class="invite__names">Scott <span class="amp">&amp;</span> Dominik</div>
+              <p class="invite__body" style="max-width:54ch;">Please join us to celebrate our engagement.<br>It is an evening of laughs, memories, drag and karaoke.</p>
+              <div class="invite__date">Saturday · 27 February 2027</div>
+              <div class="invite__meta">Holiday Inn · Corby · 7pm till late</div>
+              <img class="invite__stamp" src="images/wax-seal.png" alt="S &amp; D wax seal">
+
+              <button class="fold-cover" id="envelope" type="button" aria-label="Open the invitation">
+                <span class="fold fold--top">
+                  <img class="env__seal" src="images/wax-seal.png" alt="S &amp; D wax seal">
+                </span>
+                <span class="fold fold--bottom"></span>
+                <span class="env__hint">Scroll to open</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap center" style="position:relative;z-index:9;background:var(--ivory);padding-top:2.5rem;">
+      <div class="btn-row reveal" style="justify-content:center;flex-direction:column;align-items:center;gap:1rem;">
+        <a href="details.html" class="btn btn--gold">Engagement Party Details</a>
+        <a href="rsvp.html" class="btn btn--outline">RSVP to the Party</a>
+      </div>
+    </div>
+</section>
+
+<!-- ============================ STORY ============================ -->
+<section class="band band--parchment" id="story" data-screen-label="Our Story">
+  <div class="wrap">
+    <div class="split">
+      <div class="split__media reveal">
+        <div class="story-img-frame">
+          <figure class="ph story-img">
+            <img src="images/scott-and-dom.jpg" alt="Scott and Dominik" onerror="this.style.display='none'">
+          </figure>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">Scott &amp;<br>Dominik</h2>
+        <div class="ornament" style="margin:1.6rem 0;"><span class="diamond"></span></div>
+        <p>We are keeping the engagement low budget as we are saving every penny for the big day. We are doing it our way = Big love, small budget.</p>
+        <p>That means a party we have poured ourselves into, food cooked with our own hands, and the people we love having in our lives all under one roof. We can not wait to celebrate this first chapter with you all and whoever you bring to celebrate with us.</p>
+        <p style="font-family:var(--display);font-style:italic;font-size:1.4rem;color:var(--burgundy);margin-top:1.5rem;">"Come as you are. Leave with a full heart."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== TRADITIONS ========================== -->
+<section class="band band--green" id="traditions" data-screen-label="Our Traditions">
+  <div class="wrap">
+    <div class="reveal" style="display:flex;justify-content:center;margin-bottom:2.6rem;">
+      <div class="koverta__media" style="width:min(300px,72%);">
+        <span class="koverta__flap"></span>
+        <img src="images/wax-seal.png" alt="Scott and Dominik wax seal" style="position:absolute;left:50%;top:58%;transform:translate(-50%,-50%);width:clamp(74px,11vw,98px);height:auto;z-index:2;filter:drop-shadow(0 4px 6px rgba(45,10,15,0.4));">
+      </div>
+    </div>
+    <div class="center reveal" style="max-width:760px;margin:0 auto;">
+      <p class="eyebrow on-dark">A Croatian Tradition</p>
+      <h3 class="section-title" style="font-size:clamp(1.8rem,3.4vw,2.4rem);margin-top:0.6rem;color:var(--on-dark);">The Koverta</h3>
+      <p style="color:var(--on-dark-soft);margin-top:1rem;">Dominik comes from a Croatian family, and over there a gift almost always comes the same way. A little cash, tucked into a beautiful card, sealed in an envelope called a <em>koverta</em>. Bought presents and registries have never really been a thing. Giving money towards a couple as they start their life together is simply seen as the warmest, most practical thing you can do.</p>
+      <p style="color:var(--on-dark-soft);margin-top:0.9rem;">There is even a moment for it. Late in the night, when the cake is cut, guests line up to congratulate the couple, hand over their <em>koverta</em>, and grab a drink and a little favour. We loved that so much we wanted to carry a piece of it into our own celebrations. So if you would ever like to give something, a card and a few pounds in an envelope is perfect. It was never about the amount, it is the gesture and the words inside that we keep forever.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================= -->
+<section class="band band--ivory" id="faq" data-screen-label="FAQ">
+  <div class="wrap center">
+    <p class="eyebrow reveal">Good to Know</p>
+    <h2 class="section-title reveal">Frequently Asked</h2>
+  </div>
+  <div class="wrap">
+    <div class="faq-list reveal" id="faqList">
+      <div class="faq-item"><button class="faq-q">Is there food at the engagement party?</button><div class="faq-a"><p>Yes — a generous self-catered spread of canapés, snacks, cakes and baked goods, all made by Scott. There's no proper sit-down dinner though, so please <strong>have a big lunch</strong> beforehand. A menu is coming, and we'll ask you to pick what you'd eat so we cook what people love and waste as little as possible. Drinks are available to buy at the bar all evening.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What should I wear?</button><div class="faq-a"><p>Cocktail glam for the engagement party — it's a bar, drag and karaoke night, so dress to be photographed and to dance. The wedding dress code will follow closer to the date.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Where should I stay, and who pays?</button><div class="faq-a"><p>The party itself is at the Holiday Inn in Corby, so it's the easy choice — stay any nights that suit you, anywhere from Friday to Monday. Scott works for Trinity, so we can pass on a discounted room rate at the Inn — but everyone books and pays for their own room separately. Coming earlier or staying longer? You're welcome to stay with us in Thorney, Peterborough — space is limited and first come, first served, with The Rose &amp; Crown in the village as a lovely backup. Thorney's just outside Peterborough, so we'll sort lifts to and from the station (and try to get you to Luton) — just note it on your RSVP.</p></div></div>
+      <div class="faq-item"><button class="faq-q">I'm flying in — which airport?</button><div class="faq-a"><p>London Luton (LTN) is the easiest and closest. Most guests fly in Saturday and out Sunday. If you're here Friday to Monday, you can stay with us or we'll help find proper accommodation for the extra nights — just note it on your RSVP.</p></div></div>
+      <div class="faq-item"><button class="faq-q">How does the stag vote work?</button><div class="faq-a"><p>It's just for fun — nothing's booked. Vote on the world map for where you picture the stag, and register your interest if you'd like to come. The trip is organised by the best men and is self-funded (everyone covers their own share). Once it's planned, proper invitations and the cost per person go out to everyone who's interested.</p></div></div>
+      <div class="faq-item"><button class="faq-q">What about wedding gifts?</button><div class="faq-a"><p>Honestly, your presence is all we want — we have everything we need at home and we're particular about what we keep. Please don't feel you have to bring anything. If you'd like to give something, our <strong>Honeymoon Box</strong> on the wedding page is the perfect way; it all goes towards the trip of a lifetime, and helps us decide where to go.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Who's invited to what?</button><div class="faq-a"><p>The engagement party is our invitation event — if you've had an invite, please come! The stag is a casual, self-funded trip organised by the best men (register interest on the stag page). The wedding in May 2028 is more intimate; we'll be in touch with details. Just tell us your plans on the RSVP.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Can I bring a plus-one or kids?</button><div class="faq-a"><p>Pop the total number of guests on your RSVP and we'll be in touch if there's anything to flag. If you're bringing little ones, let us know so we can plan accordingly.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== FOOTER =========================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__mono">Scott <span class="amp">&amp;</span> Dominik</div>
+    <div class="footer__date">Engagement · 27 Feb 2027</div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
