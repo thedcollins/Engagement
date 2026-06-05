@@ -282,6 +282,7 @@ section { position: relative; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 96px); align-items: center; }
 .split--reverse .split__media { order: 2; }
 .story-img { width: 100%; aspect-ratio: 4/5; }
+.story-img.ph { background: none; }   /* no striped placeholder flashing while the photo loads */
 .story-img--wide { aspect-ratio: 5/4; }
 .story-img-frame { position: relative; padding: 14px; }
 .story-img-frame::before { content: ""; position: absolute; inset: 0; border: 1px solid var(--gold); transform: translate(16px, 16px); z-index: -1; }
