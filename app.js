@@ -154,16 +154,7 @@
     if (evtParty) evtParty.addEventListener('change', syncOrigin);
     syncOrigin();
 
-    // the lunch menu link shows only when Sunday lunch is selected
-    var evtLunch = $('#evtLunch');
-    var lunchMenuLink = $('#lunchMenuLink');
-    if (evtLunch && lunchMenuLink) {
-      var syncLunchMenu = function () { lunchMenuLink.hidden = !evtLunch.checked; };
-      evtLunch.addEventListener('change', syncLunchMenu);
-      syncLunchMenu();
-    }
-
-    // accommodation logic driven by arrival night + length of stay
+// accommodation logic driven by arrival night + length of stay
     var oneNight = form.querySelector('input[name="length"][value="1 night"]');
     var oneChip = oneNight ? oneNight.closest('.radio-chip') : null;
     var roseChip = $('#stayRose');
