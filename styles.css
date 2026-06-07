@@ -304,7 +304,7 @@ section { position: relative; }
 /* =========================================================================
    Invitation card
    ========================================================================= */
-.invite-wrap { display: flex; justify-content: center; margin-top: 3rem; perspective: 1600px; }
+.invite-wrap { display: flex; justify-content: center; margin-top: 0; perspective: 1600px; }
 .invite {
   width: min(1116px, 100%);
   background:
@@ -349,7 +349,8 @@ section { position: relative; }
 .invite-pin-track { position: relative; height: 220vh; }
 .invite-pin {
   position: sticky; top: 0; height: 100vh;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding-top: clamp(80px, 9vh, 120px);
 }
 
 .invite-reveal { position: relative; --open: 0; width: 100%; }
