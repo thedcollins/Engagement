@@ -284,8 +284,7 @@ section { position: relative; }
 .story-img { width: 100%; aspect-ratio: 4/5; }
 .story-img.ph { background: none; }   /* no striped placeholder flashing while the photo loads */
 .story-img--wide { aspect-ratio: 5/4; }
-.story-img-frame { position: relative; padding: 14px; }
-.story-img-frame::before { content: ""; position: absolute; inset: 0; border: 1px solid var(--gold); transform: translate(16px, 16px); z-index: -1; }
+.story-img-frame { position: relative; padding: 0; }
 
 /* =========================================================================
    Detail rows / info cards
@@ -304,7 +303,7 @@ section { position: relative; }
 /* =========================================================================
    Invitation card
    ========================================================================= */
-.invite-wrap { display: flex; justify-content: center; margin-top: 0; perspective: 1600px; }
+.invite-wrap { display: flex; justify-content: center; margin-top: 3rem; perspective: 1600px; }
 .invite {
   width: min(1116px, 100%);
   background:
@@ -349,8 +348,7 @@ section { position: relative; }
 .invite-pin-track { position: relative; height: 220vh; }
 .invite-pin {
   position: sticky; top: 0; height: 100vh;
-  display: flex; align-items: flex-start; justify-content: center;
-  padding-top: clamp(80px, 9vh, 120px);
+  display: flex; align-items: center; justify-content: center;
 }
 
 .invite-reveal { position: relative; --open: 0; width: 100%; }
@@ -659,7 +657,6 @@ section { position: relative; }
   .split { grid-template-columns: 1fr; }
   .split--reverse .split__media { order: 0; }
   .field-row, .checks { grid-template-columns: 1fr; }
-  .story-img-frame::before { transform: translate(10px,10px); }
 }
 @media (max-width: 560px) {
   .wrap { padding: 0 22px; }
